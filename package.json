@@ -1,0 +1,46 @@
+{
+  "name": "custom-component-library",
+  "version": "1.0.0",
+  "description": "This is a custom component library developed as part of study purpose",
+  "main": "index.js",
+  "author": "Abil Manoj",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "main": "./lib/cjs/index.js",
+    "module": "./lib/esm/index.js",
+    "types": "./lib/esm/index.d.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.2.25",
+    "@storybook/addon-essentials": "^8.0.4",
+    "@storybook/addon-interactions": "^8.0.4",
+    "@storybook/addon-links": "^8.0.4",
+    "@storybook/addon-onboarding": "^8.0.4",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
+    "@storybook/blocks": "^8.0.4",
+    "@storybook/react": "^8.0.4",
+    "@storybook/react-webpack5": "^8.0.4",
+    "@storybook/test": "^8.0.4",
+    "@types/react": "^18.2.69",
+    "@types/react-dom": "^18.2.22",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.0.4",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/abilmanoj7"
+  }
+}
